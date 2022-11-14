@@ -28,4 +28,4 @@ spec:
     name: flux-system
   serviceAccountName: kustomize-controller
   path: ./infrastructure/kyverno-policies
-  prune: true
+  prune: false
