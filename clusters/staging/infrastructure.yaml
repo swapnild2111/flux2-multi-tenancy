@@ -1,24 +1,6 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: kyverno
-  namespace: flux-system
-  labels:
-    kustomize.toolkit.fluxcd.io/prune: disabled
-spec:
-  interval: 720m0s
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  serviceAccountName: kustomize-controller
-  path: ./infrastructure/kyverno
-  prune: false
-  wait: true
-  timeout: 10m
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
   name: kyverno-policies
   namespace: flux-system
 spec:
