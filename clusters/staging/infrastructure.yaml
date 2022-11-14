@@ -10,7 +10,7 @@ spec:
     name: flux-system
   serviceAccountName: kustomize-controller
   path: ./infrastructure/kyverno
-  prune: true
+  prune: false
   wait: true
   timeout: 10m
 ---
